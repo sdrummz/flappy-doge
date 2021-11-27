@@ -1,4 +1,4 @@
-const HOLE_HEIGHT = 160;
+const HOLE_HEIGHT = 180;
 const PIPE_WIDTH = 100;
 const PIPE_INTERVAL = 1500;
 const PIPE_SPEED = 0.75;
