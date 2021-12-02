@@ -1,4 +1,4 @@
-import { updateBird, setupBird, getBirdRect } from './bird.js';
+import { updateDoge, setupDoge, getDogeRect } from './doge.js';
 import { updatePipes, setupPipes, getPassedPipeCount, getPipeRects } from './pipe.js';
 
 document.addEventListener('keypress', handleStart, { once: true });
@@ -13,7 +13,7 @@ function updateLoop(time) {
     return;
   }
   const delta = time - lastTime;
-  updateBird(delta);
+  updateDoge(delta);
   updatePipes(delta);
   if (checkLose()) return handleLose();
   lastTime = time;
@@ -21,9 +21,9 @@ function updateLoop(time) {
 }
 
 function checkLose() {
-  const birdRect = getBirdRect();
-  const insidePipe = getPipeRects().some((rect) => isCollision(birdRect, rect));
-  const outsideWorld = birdRect.top < 0 || birdRect.bottom > window.innerHeight;
+  const dogeRect = getDogeRect();
+  const insidePipe = getPipeRects().some((rect) => isCollision(dogeRect, rect));
+  const outsideWorld = dogeRect.top < 0 || dogeRect.bottom > window.innerHeight;
   return outsideWorld || insidePipe;
 }
 
@@ -34,7 +34,7 @@ function isCollision(rect1, rect2) {
 function handleStart() {
   title.classList.add('hide');
   lastTime = null;
-  setupBird();
+  setupDoge();
   setupPipes();
   window.requestAnimationFrame(updateLoop);
 }

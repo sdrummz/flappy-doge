@@ -28,18 +28,18 @@ body {
   display: none;
 }
 
-.bird {
-  --bird-top: -1000;
-  --bird-size: 70px;
+.doge {
+  --doge-top: -1000;
+  --doge-size: 65px;
   position: absolute;
   background-image: url('Dogecoin.png');
   background-size: cover;
   background-repeat: no-repeat;
   /* background-color: hsl(50, 75%, 50%); */
-  width: var(--bird-size);
-  height: var(--bird-size);
-  left: var(--bird-size);
-  top: calc(var(--bird-top) * 1px);
+  width: var(--doge-size);
+  height: var(--doge-size);
+  left: var(--doge-size);
+  top: calc(var(--doge-top) * 1px);
   border-radius: 50%;
 }
 
